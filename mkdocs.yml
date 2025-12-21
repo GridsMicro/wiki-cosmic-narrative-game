@@ -60,8 +60,11 @@ nav:
   - คู่มือ:
     - เคล็ดลับการเล่น: guides/tips.md
     - คำถามที่พบบ่อย: guides/faq.md
+    - การเจนภาพ (Art Prompts): guides/prompts.md
   - สำหรับนักพัฒนา:
     - การติดตั้ง: developer/installation.md
+    - แผนการพัฒนา: developer/roadmap.md
+    - ประวัติการอัพเดท: developer/changelog.md
     - โครงสร้างโค้ด: developer/structure.md
     - API Reference: developer/api.md
 

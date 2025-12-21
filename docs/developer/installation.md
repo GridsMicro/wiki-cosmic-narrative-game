@@ -21,7 +21,7 @@
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/cosmic-narrative-game.git
+git clone https://github.com/GridsMicro/cosmic-narrative-game.git
 cd cosmic-narrative-game
 ```
 
@@ -141,30 +141,21 @@ npm start
 cosmic-narrative-game/
 ├── app/                        # Next.js App Router
 │   ├── ai/                    # ระบบ AI Chat
-│   ├── game/                  # ระบบเกม RPG
-│   │   ├── layout.tsx         # Game Layout + Modals
-│   │   ├── astra-city/        # เมืองหลัก
-│   │   ├── battle/            # ระบบการต่อสู้
-│   │   ├── cards/             # จัดการการ์ด
-│   │   └── dev-tools/         # เครื่องมือสำหรับ Dev
-│   └── api/                   # API Routes
-│       └── chat/              # Gemini AI Integration
+│   ├── game/                  # ระบบเกม RPG (layout.tsx, battle, cards, dev-tools)
+│   └── api/                   # API Routes (Gemini AI Integration)
 ├── components/                 # React Components
-│   ├── game/                  # Game-specific components
-│   │   ├── modals/            # Modal components
-│   │   ├── PlayerHUD.tsx      # HUD หลัก
-│   │   └── PetCompanion.tsx   # ระบบสัตว์เลี้ยง
+│   ├── game/                  # Game-specific components (modals, PlayerHUD, PetCompanion)
 │   └── CosmicChatComponent.tsx
 ├── context/
-│   └── GameContext.tsx        # Global State Management
+│   └── GameContext.tsx        # Global State Management (Supabase Sync)
 ├── hooks/
-│   └── useGameData.ts         # Custom Hooks
+│   └── useGameData.ts         # Custom Hooks for Data Operations
 ├── lib/
 │   └── supabase.ts            # Supabase Client
 ├── types/
-│   ├── game.ts                # Game Types
-│   └── database.ts            # Database Types
-└── docs/                      # เอกสาร
+│   ├── game.ts                # Game Logic Types
+│   └── database.ts            # Supabase Generated Types
+└── docs/                      # คู่มือและ SQL Schema
     ├── roadmap.md
     ├── changelog.md
     └── ...
