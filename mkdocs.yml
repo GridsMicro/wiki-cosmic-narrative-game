@@ -1,0 +1,100 @@
+site_name: Cosmic Narrative Game Wiki
+site_description: Complete guide and documentation for the Cosmic Narrative Game
+site_author: Cosmic Narrative Game Team
+site_url: https://gridsmicro.github.io/wiki-cosmic-narrative-game/
+
+# Repository
+repo_name: wiki-cosmic-narrative-game
+repo_url: https://github.com/GridsMicro/wiki-cosmic-narrative-game
+
+# Theme Configuration
+theme:
+  name: material
+  language: th
+  palette:
+    # Light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Noto Sans Thai
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+# Navigation
+nav:
+  - หน้าแรก: index.md
+  - เริ่มต้นเล่น:
+    - ภาพรวมเกม: getting-started/overview.md
+    - การสร้างตัวละคร: getting-started/character-creation.md
+    - ระบบพื้นฐาน: getting-started/basic-systems.md
+  - ระบบเกม:
+    - ระบบการต่อสู้: systems/battle.md
+    - ระบบการ์ด: systems/cards.md
+    - ระบบสกิล: systems/skills.md
+    - ระบบสัตว์เลี้ยง: systems/pets.md
+  - โลกเกม:
+    - แผนที่โลก: world/map.md
+    - เมืองและภูมิภาค: world/regions.md
+    - ตัวละคร NPC: world/npcs.md
+  - คู่มือ:
+    - เคล็ดลับการเล่น: guides/tips.md
+    - คำถามที่พบบ่อย: guides/faq.md
+  - สำหรับนักพัฒนา:
+    - การติดตั้ง: developer/installation.md
+    - โครงสร้างโค้ด: developer/structure.md
+    - API Reference: developer/api.md
+
+# Plugins
+plugins:
+  - search:
+      lang: 
+        - th
+        - en
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GridsMicro/cosmic-narrative-game
+  generator: false
