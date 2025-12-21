@@ -61,6 +61,7 @@ nav:
     - เคล็ดลับการเล่น: guides/tips.md
     - คำถามที่พบบ่อย: guides/faq.md
     - การเจนภาพ (Art Prompts): guides/prompts.md
+    - แซมเปิลแผนที่หิมพานต์: guides/himmaphan.md
   - สำหรับนักพัฒนา:
     - การติดตั้ง: developer/installation.md
     - แผนการพัฒนา: developer/roadmap.md
