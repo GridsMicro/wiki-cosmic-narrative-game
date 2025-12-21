@@ -12,13 +12,13 @@
         <meta name="author" content="Cosmic Narrative Game Team">
       
       
-        <link rel="canonical" href="https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/changelog/">
+        <link rel="canonical" href="https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/structure/">
       
       
-        <link rel="prev" href="../roadmap/">
+        <link rel="prev" href="../changelog/">
       
       
-        <link rel="next" href="../structure/">
+        <link rel="next" href="../api/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>ประวัติการอัพเดท - Cosmic Narrative Game Wiki</title>
+        <title>โครงสร้างโค้ด - Cosmic Narrative Game Wiki</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changelog" class="md-skip">
+        <a href="#project-structure" class="md-skip">
           ข้ามไปที่เนื้อหา
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ประวัติการอัพเดท
+              โครงสร้างโค้ด
             
           </span>
         </div>
@@ -1139,6 +1139,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ประวัติการอัพเดท
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1158,7 +1186,7 @@
   <span class="md-ellipsis">
     
   
-    ประวัติการอัพเดท
+    โครงสร้างโค้ด
   
 
     
@@ -1176,7 +1204,7 @@
   <span class="md-ellipsis">
     
   
-    ประวัติการอัพเดท
+    โครงสร้างโค้ด
   
 
     
@@ -1202,22 +1230,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unreleased-2025-12-21" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Unreleased] - 2025-12-21
+        🏗️ ภาพรวมสถาปัตยกรรม
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-21">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 โฟลเดอร์หลัก
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 โฟลเดอร์หลัก">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#app-routing-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Added
+        🌍 /app (Routing &amp; Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-uiux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 /components (UI/UX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-hooks-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 /context &amp; /hooks (Logic)
       
     </span>
   </a>
@@ -1230,316 +1291,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unreleased-2025-12-20" class="md-nav__link">
+  <a href="#supabase" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Unreleased] - 2025-12-20
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-20">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unreleased-2025-12-18" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Unreleased] - 2025-12-18
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-18">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unreleased-2024-12-17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Unreleased] - 2024-12-17
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2024-12-17">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#030-2024-12-15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.3.0] - 2024-12-15
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.3.0] - 2024-12-15">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#020-2024-12-10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.2.0] - 2024-12-10
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.2.0] - 2024-12-10">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#010-2024-12-01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.1.0] - 2024-12-01
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.1.0] - 2024-12-01">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infrastructure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Infrastructure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statistics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Statistics
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📊 Statistics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#code-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Metrics (ล่าสุด)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-records" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Database Records
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#version-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ Version Naming
+        🗄️ ระบบฐานข้อมูล (Supabase)
       
     </span>
   </a>
@@ -1547,93 +1302,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#change-categories" class="md-nav__link">
+  <a href="#repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 Change Categories
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 Change Categories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deprecated
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Removed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔗 Links
+        🔗 ลิงก์ repository
       
     </span>
   </a>
@@ -1644,34 +1316,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../structure/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    โครงสร้างโค้ด
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1739,22 +1383,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unreleased-2025-12-21" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Unreleased] - 2025-12-21
+        🏗️ ภาพรวมสถาปัตยกรรม
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-21">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📂 โฟลเดอร์หลัก
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📂 โฟลเดอร์หลัก">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#app-routing-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Added
+        🌍 /app (Routing &amp; Pages)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-uiux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 /components (UI/UX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#context-hooks-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 /context &amp; /hooks (Logic)
       
     </span>
   </a>
@@ -1767,316 +1444,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unreleased-2025-12-20" class="md-nav__link">
+  <a href="#supabase" class="md-nav__link">
     <span class="md-ellipsis">
       
-        [Unreleased] - 2025-12-20
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-20">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unreleased-2025-12-18" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Unreleased] - 2025-12-18
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2025-12-18">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unreleased-2024-12-17" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [Unreleased] - 2024-12-17
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[Unreleased] - 2024-12-17">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#030-2024-12-15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.3.0] - 2024-12-15
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.3.0] - 2024-12-15">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#020-2024-12-10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.2.0] - 2024-12-10
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.2.0] - 2024-12-10">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#010-2024-12-01" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        [0.1.0] - 2024-12-01
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="[0.1.0] - 2024-12-01">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infrastructure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Infrastructure
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statistics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📊 Statistics
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📊 Statistics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#code-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Metrics (ล่าสุด)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-records" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Database Records
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#version-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏷️ Version Naming
+        🗄️ ระบบฐานข้อมูล (Supabase)
       
     </span>
   </a>
@@ -2084,93 +1455,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#change-categories" class="md-nav__link">
+  <a href="#repository" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 Change Categories
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 Change Categories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#added_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Added
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changed_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deprecated
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#removed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Removed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixed_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixed
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔗 Links
+        🔗 ลิงก์ repository
       
     </span>
   </a>
@@ -2197,193 +1485,56 @@
   
 
 
-<h1 id="changelog">ประวัติการอัพเดท (Changelog)<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
-<p>เอกสารนี้บันทึกการเปลี่ยนแปลงที่สำคัญทั้งหมดของโปรเจค Cosmic Narrative Game</p>
-<p>รูปแบบอ้างอิงจาก <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a></p>
+<h1 id="project-structure">โครงสร้างโปรเจค (Project Structure)<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h1>
+<p>บันทึกโครงสร้างสถาปัตยกรรมของ Cosmic Narrative Game (อัพเดทล่าสุด 2025-12-21) เพื่อความเข้าใจในการพัฒนาและรักษาโค้ด</p>
 <hr />
-<h2 id="unreleased-2025-12-21">[Unreleased] - 2025-12-21<a class="headerlink" href="#unreleased-2025-12-21" title="Permanent link">&para;</a></h2>
-<h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
-<ul>
-<li>📚 <strong>Wiki Migration &amp; Deployment</strong>: ย้ายระบบคู่มือทั้งหมดจาก <code>app/guide</code> ไปยัง MkDocs Wiki แยกต่างหาก</li>
-<li>ตั้งค่า GitHub Actions สำหรับ Auto-deploy ไปยัง <code>GridsMicro/wiki-cosmic-narrative-game</code></li>
-<li>สร้างคู่มือสายผู้เล่น (Basic Systems, Overview, World Lore)</li>
-<li>สร้างคู่มือสายนักพัฒนา (Installation, Project Structure V3)</li>
-<li>🏗️ <strong>Project Structure V3</strong>: อัพเดทโครงสร้างโปรเจคให้เป็นปัจจุบัน (ลบ <code>astra-city/</code> และย้ายไปใช้ Dynamic Location)</li>
-<li>🛠️ <strong>Wiki Stability</strong>: เพิ่มหน้า Placeholder ทั้งหมดเพื่อป้องกัน 404 ในระหว่างพัฒนาเนื้อหา</li>
-</ul>
+<h2 id="_1">🏗️ ภาพรวมสถาปัตยกรรม<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>โปรเจคนี้ใช้โครงสร้าง <strong>Modular Monolith</strong> บน Next.js โดยแยกส่วน Logic ของ AI Chat และ RPG ออกจากกันแต่แชร์ State ร่วมกันผ่าน <code>GameContext</code></p>
 <hr />
-<h2 id="unreleased-2025-12-20">[Unreleased] - 2025-12-20<a class="headerlink" href="#unreleased-2025-12-20" title="Permanent link">&para;</a></h2>
-<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">&para;</a></h3>
+<h2 id="_2">📂 โฟลเดอร์หลัก<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="app-routing-pages">🌍 <code>/app</code> (Routing &amp; Pages)<a class="headerlink" href="#app-routing-pages" title="Permanent link">&para;</a></h3>
 <ul>
-<li>🗺️ <strong>NPC &amp; Map Master System</strong>: ระบบจัดการโลกเกมที่สมบูรณ์</li>
-<li><strong>Map Registry</strong>: ตาราง <code>maps</code> และ Dev Tools สำหรับจัดการสถานที่</li>
-<li><strong>NPC Engine</strong>: ตาราง <code>npcs_master</code> พร้อมระบบจัดการ sprite ผ่าน Supabase Storage</li>
-<li><strong>Dialogue System</strong>: ระบบบทสนทนาแบบ JSON array</li>
-<li><strong>Interactive NPCs</strong>: รองรับ <code>function_type</code> (Warp, Reward, Shop, Buff, Upgrade)</li>
-<li>🔍 <strong>Search &amp; Filter System</strong>: ระบบค้นหา real-time ใน Dev Tools</li>
-<li>🔮 <strong>Oracle Editor</strong>: เพิ่มการอัพโหลดรูปภาพสำหรับ Oracle Prophecies</li>
+<li><strong><code>/ai</code></strong>: หัวใจของระบบ Chat-driven Storytelling ใช้ Gemini API ในการขับเคลื่อนเนื้อเรื่อง</li>
+<li><strong><code>/game</code></strong>: ระบบ RPG แบบดั้งเดิม (Traditional RPG)<ul>
+<li><strong><code>layout.tsx</code></strong>: จัดการโครงสร้าง Modal และเป็นตัวกลางในการ Sync ข้อมูลระหว่างแชทกับสถานะเกม</li>
+<li><strong><code>/battle</code></strong>: กลไกการต่อสู้แบบเทิร์นเบส</li>
+<li><strong><code>/cards</code></strong>: ระบบจัดการสำรับการ์ดของผู้เล่น</li>
+<li><strong><code>/dev-tools</code></strong>: แผงควบคุมสำหรับนักพัฒนา (ใช้สำหรับ Seed ข้อมูลและจัดการฐานข้อมูลหน้างาน)</li>
 </ul>
-<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🎨 <strong>Dev Tools Layout</strong>: ปรับโครงสร้างให้ Editor Form อยู่ด้านบนและ Registry List อยู่ด้านล่าง</li>
-<li>⚡ <strong>Player Editor</strong>: เพิ่มการแก้ไข "5 Celestial Powers" (<code>nit</code>, <code>tapa</code>, <code>meditation</code>, <code>soul</code>, <code>holy</code>)</li>
+</li>
+<li><strong><code>/dev</code></strong>: ห้องทดลองสำหรับฟีเจอร์ใหม่ๆ ก่อนนำไปใช้จริงในเกม</li>
 </ul>
-<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link">&para;</a></h3>
+<h3 id="components-uiux">🧩 <code>/components</code> (UI/UX)<a class="headerlink" href="#components-uiux" title="Permanent link">&para;</a></h3>
 <ul>
-<li>🔧 <strong>SQL Idempotency</strong>: ปรับ SQL schema ให้ใช้ <code>IF NOT EXISTS</code> เพื่อรันซ้ำได้อย่างปลอดภัย</li>
+<li><strong><code>/game</code></strong>: คอมโพเนนต์ที่ใช้เฉพาะในโหมด RPG<ul>
+<li><strong><code>/modals</code></strong>: ระบบหน้าต่างป๊อปอัพ (Status, Equipment, Inventory) ที่ถูกแยกเป็นส่วนๆ เพื่อความง่ายในการแก้ไข</li>
+<li><strong><code>PlayerHUD.tsx</code></strong>: แถบแสดงสถานะแบบ Premium (HP, MP, Level, Gold)</li>
+<li><strong><code>PetCompanion.tsx</code></strong>: ระบบสัตว์เลี้ยงที่จะคอยลอยอยู่ข้างหน้าจอ</li>
+</ul>
+</li>
+</ul>
+<h3 id="context-hooks-logic">💾 <code>/context</code> &amp; <code>/hooks</code> (Logic)<a class="headerlink" href="#context-hooks-logic" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>GameContext.tsx</code></strong>: เป็น <strong>Source of Truth</strong> เพียงหนึ่งเดียวของเกม เชื่อมต่อกับ Supabase ตลอดเวลา</li>
+<li><strong><code>useGameData.ts</code></strong>: Hook ส่วนกลางที่ใช้ในการ Read/Write ข้อมูลผู้เล่น เพื่อลดความซ้ำซ้อนของโค้ด</li>
 </ul>
 <hr />
-<h2 id="unreleased-2025-12-18">[Unreleased] - 2025-12-18<a class="headerlink" href="#unreleased-2025-12-18" title="Permanent link">&para;</a></h2>
-<h3 id="added_2">Added<a class="headerlink" href="#added_2" title="Permanent link">&para;</a></h3>
+<h2 id="supabase">🗄️ ระบบฐานข้อมูล (Supabase)<a class="headerlink" href="#supabase" title="Permanent link">&para;</a></h2>
+<p>เราแยกข้อมูลออกเป็น 3 กลุ่มหลัก:
+1. <strong>Master Data</strong>: ข้อมูลที่ห้ามแก้ไขจากฝั่งผู้เล่น (<code>cards_master</code>, <code>items</code>, <code>npcs_master</code>, <code>maps</code>)
+2. <strong>Player Data</strong>: ข้อมูลส่วนตัวและความคืบหน้า (<code>player_save_data</code>)
+3. <strong>Instance Data</strong>: สิ่งของที่ผู้เล่นครอบครอง (<code>player_items</code>, <code>player_pets</code>, <code>player_cards</code>)</p>
+<hr />
+<h2 id="repository">🔗 ลิงก์ repository<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h2>
 <ul>
-<li>📸 <strong>Design System Snapshot</strong>: สร้าง <code>/docs/ui_snapshot_v2.md</code> เพื่อบันทึกสไตล์ Premium Dark Mode</li>
-<li>🎮 <strong>Enhanced Equipment Slots</strong>: เพิ่มขนาด slot จาก <code>w-16</code> เป็น <code>w-20</code> เพื่อความรู้สึก "AAA game"</li>
-<li>📱 <strong>Responsive Body Layout</strong>: ระบบ responsive สำหรับ equipment grid แบบ humanoid</li>
-<li>🛒 <strong>Marketplace Integration</strong>: เชื่อมต่อ UI กับ Supabase <code>items</code> table</li>
-<li>🗄️ <strong>Equipment Database</strong>: ออกแบบตาราง <code>items</code> (master) และ <code>player_items</code> (instance)</li>
-<li>💊 <strong>Consumable Seed Data</strong>: เพิ่มข้อมูล HP/MP potions และ status cleanse items</li>
-<li>🎯 <strong>Game Overlay Menu</strong>: เพิ่มเมนูลอยสำหรับเข้าถึง Equipment และ Skills</li>
-</ul>
-<h3 id="changed_1">Changed<a class="headerlink" href="#changed_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>↩️ <strong>UI/UX Revert</strong>: เปลี่ยนกลับเป็น separate pages แทน scrollable modal</li>
-<li>🎯 <strong>Skills Tab Revert</strong>: กลับไปใช้ mock version คุณภาพสูง</li>
-<li>📏 <strong>Modal Refinement</strong>: ปรับ padding และ heading scale สำหรับหน้าจอเล็ก</li>
-<li>📱 <strong>Mobile UI Optimization</strong>: ปรับ game modals ให้เหมาะกับมือถือ</li>
-<li>🏛️ <strong>Main Square Header</strong>: ทำให้ compact ขึ้นเพื่อไม่ทับกับ HUD</li>
-<li>🎨 <strong>Game Buttons</strong>: ปรับปุ่มให้เป็น <code>rounded-2xl</code> และ compact</li>
-</ul>
-<h3 id="fixed_1">Fixed<a class="headerlink" href="#fixed_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🐛 <strong>JSX Structure</strong>: แก้ syntax errors ใน <code>layout.tsx</code></li>
-<li>📐 <strong>HUD Overlap</strong>: แก้ปัญหา layout shifts</li>
-<li>🗄️ <strong>Database Schema</strong>: แก้ missing columns (<code>rarity</code>, <code>price</code>) ในตาราง <code>items</code></li>
-<li>🎨 <strong>UI Overlap</strong>: แก้ปัญหา UI ทับกันในหลายหน้า</li>
+<li><strong>Game Repo</strong>: <a href="https://github.com/GridsMicro/cosmic-narrative-game">GridsMicro/cosmic-narrative-game</a></li>
+<li><strong>Wiki Repo</strong>: <a href="https://github.com/GridsMicro/wiki-cosmic-narrative-game">GridsMicro/wiki-cosmic-narrative-game</a></li>
 </ul>
 <hr />
-<h2 id="unreleased-2024-12-17">[Unreleased] - 2024-12-17<a class="headerlink" href="#unreleased-2024-12-17" title="Permanent link">&para;</a></h2>
-<h3 id="added_3">Added<a class="headerlink" href="#added_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li>📝 <strong>Rich Text Rendering</strong>: ใช้ <code>react-markdown</code> และ <code>remark-gfm</code> สำหรับ AI responses</li>
-<li>🔧 <strong>Shared Types</strong>: สร้าง <code>types/chat.ts</code> สำหรับ type safety</li>
-</ul>
-<h3 id="changed_2">Changed<a class="headerlink" href="#changed_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🧩 <strong>Component Refactoring</strong>: แยก Player Status ออกเป็น <code>PlayerHUD.tsx</code></li>
-</ul>
-<h3 id="fixed_2">Fixed<a class="headerlink" href="#fixed_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🔒 <strong>AI Response Encoding</strong>: แก้ปัญหา "Code Leaking" ด้วย Base64 encoding</li>
-<li>เพิ่ม Base64 encoding ใน <code>app/api/chat/route.ts</code></li>
-<li>เพิ่ม Base64 decoding ใน <code>CosmicChatComponent.tsx</code></li>
-</ul>
-<hr />
-<h2 id="030-2024-12-15">[0.3.0] - 2024-12-15<a class="headerlink" href="#030-2024-12-15" title="Permanent link">&para;</a></h2>
-<h3 id="added_4">Added<a class="headerlink" href="#added_4" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🐾 <strong>Pet System</strong>: ระบบสัตว์เลี้ยงครบวงจร</li>
-<li>ตาราง <code>pets_master</code> และ <code>player_pets</code></li>
-<li>Pet Companion UI พร้อม animations</li>
-<li>ระบบ buffs จากสัตว์เลี้ยง</li>
-<li>Pet personality และ dialogue</li>
-<li>🎴 <strong>Card System Enhancements</strong>:</li>
-<li>Card rarity system (Common, Rare, Epic, Legendary)</li>
-<li>Card upgrade mechanics</li>
-<li>Visual card collection UI</li>
-</ul>
-<h3 id="changed_3">Changed<a class="headerlink" href="#changed_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🎨 <strong>UI Polish</strong>: ปรับปรุง animations และ transitions</li>
-<li>⚡ <strong>Performance</strong>: Optimize re-renders ด้วย React.memo</li>
-</ul>
-<hr />
-<h2 id="020-2024-12-10">[0.2.0] - 2024-12-10<a class="headerlink" href="#020-2024-12-10" title="Permanent link">&para;</a></h2>
-<h3 id="added_5">Added<a class="headerlink" href="#added_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>⚔️ <strong>Equipment System</strong>: ระบบอุปกรณ์และ inventory</li>
-<li>8 equipment slots (Weapon, Helmet, Armor, etc.)</li>
-<li>Humanoid layout UI</li>
-<li>Item stats และ bonuses</li>
-<li>🏪 <strong>Marketplace</strong>: ระบบซื้อขายไอเทม</li>
-<li>Dynamic item listing</li>
-<li>Gold currency system</li>
-<li>Buy/Sell mechanics</li>
-<li>🔨 <strong>Blacksmith</strong>: ระบบอัพเกรดอุปกรณ์</li>
-</ul>
-<h3 id="changed_4">Changed<a class="headerlink" href="#changed_4" title="Permanent link">&para;</a></h3>
-<ul>
-<li>💾 <strong>Database Schema</strong>: ปรับปรุงโครงสร้างตาราง</li>
-<li>🎯 <strong>Game Balance</strong>: ปรับ item prices และ stats</li>
-</ul>
-<hr />
-<h2 id="010-2024-12-01">[0.1.0] - 2024-12-01<a class="headerlink" href="#010-2024-12-01" title="Permanent link">&para;</a></h2>
-<h3 id="added_6">Added<a class="headerlink" href="#added_6" title="Permanent link">&para;</a></h3>
-<ul>
-<li>🎮 <strong>Initial Release</strong>: เวอร์ชันแรกของเกม</li>
-<li>ระบบ Authentication (Supabase)</li>
-<li>Player Profile System</li>
-<li>Basic Chat Interface</li>
-<li>Card Collection System</li>
-<li>Dark Mode Premium UI</li>
-<li>Thai Language Support</li>
-</ul>
-<h3 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h3>
-<ul>
-<li>⚙️ <strong>Tech Stack</strong>:</li>
-<li>Next.js 14 (App Router)</li>
-<li>TypeScript</li>
-<li>Tailwind CSS</li>
-<li>Supabase (PostgreSQL + Auth + Storage)</li>
-<li>Framer Motion</li>
-<li>Google Gemini AI</li>
-</ul>
-<hr />
-<h2 id="statistics">📊 Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
-<h3 id="code-metrics">Code Metrics (ล่าสุด)<a class="headerlink" href="#code-metrics" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Total Lines of Code</strong>: ~15,000+</li>
-<li><strong>Components</strong>: 50+</li>
-<li><strong>Database Tables</strong>: 12</li>
-<li><strong>API Routes</strong>: 8</li>
-<li><strong>Pages</strong>: 20+</li>
-</ul>
-<h3 id="database-records">Database Records<a class="headerlink" href="#database-records" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cards</strong>: 50+ cards</li>
-<li><strong>Items</strong>: 30+ items</li>
-<li><strong>NPCs</strong>: 20+ characters</li>
-<li><strong>Maps</strong>: 7 main hubs</li>
-<li><strong>Pets</strong>: 10+ companions</li>
-</ul>
-<hr />
-<h2 id="version-naming">🏷️ Version Naming<a class="headerlink" href="#version-naming" title="Permanent link">&para;</a></h2>
-<p>เราใช้ <a href="https://semver.org/">Semantic Versioning</a>:
-- <strong>MAJOR</strong>: เปลี่ยนแปลงใหญ่ที่ไม่ compatible
-- <strong>MINOR</strong>: เพิ่มฟีเจอร์ใหม่แบบ backward compatible
-- <strong>PATCH</strong>: Bug fixes และ improvements</p>
-<hr />
-<h2 id="change-categories">📝 Change Categories<a class="headerlink" href="#change-categories" title="Permanent link">&para;</a></h2>
-<h3 id="added_7">Added<a class="headerlink" href="#added_7" title="Permanent link">&para;</a></h3>
-<p>ฟีเจอร์ใหม่ที่เพิ่มเข้ามา</p>
-<h3 id="changed_5">Changed<a class="headerlink" href="#changed_5" title="Permanent link">&para;</a></h3>
-<p>การเปลี่ยนแปลงฟีเจอร์ที่มีอยู่แล้ว</p>
-<h3 id="deprecated">Deprecated<a class="headerlink" href="#deprecated" title="Permanent link">&para;</a></h3>
-<p>ฟีเจอร์ที่จะถูกลบในอนาคต</p>
-<h3 id="removed">Removed<a class="headerlink" href="#removed" title="Permanent link">&para;</a></h3>
-<p>ฟีเจอร์ที่ถูกลบออก</p>
-<h3 id="fixed_3">Fixed<a class="headerlink" href="#fixed_3" title="Permanent link">&para;</a></h3>
-<p>Bug fixes</p>
-<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
-<p>แก้ไขช่องโหว่ด้านความปลอดภัย</p>
-<hr />
-<h2 id="links">🔗 Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../roadmap/">Roadmap</a> - แผนการพัฒนาในอนาคต</li>
-<li><a href="https://github.com/yourusername/cosmic-narrative-game/issues">GitHub Issues</a> - รายงานปัญหา</li>
-<li><a href="https://github.com/yourusername/cosmic-narrative-game/releases">GitHub Releases</a> - Download versions</li>
-</ul>
-<hr />
-<p><em>เอกสารนี้อัพเดทอัตโนมัติทุกครั้งที่มีการเปลี่ยนแปลงสำคัญ</em></p>
+<div class="admonition info">
+<p class="admonition-title">การอัพเดทโครงสร้าง</p>
+<p>เราได้นำ <code>astra-city/</code> ออกแล้ว และเปลี่ยนมาใช้ระบบ <strong>Dynamic Location</strong> ที่ดึงข้อมูลจากตาราง <code>maps</code> แทน เพื่อความยืดหยุ่นในการเพิ่มเมืองใหม่ๆ ในอนาคต</p>
+</div>
 
 
 

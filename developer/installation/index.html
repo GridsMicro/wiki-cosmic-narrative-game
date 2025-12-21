@@ -15,8 +15,10 @@
         <link rel="canonical" href="https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/installation/">
       
       
-        <link rel="prev" href="../../world/npcs/">
+        <link rel="prev" href="../../guides/prompts/">
       
+      
+        <link rel="next" href="../roadmap/">
       
       
         
@@ -246,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../getting-started/overview.md" class="md-tabs__link">
+        <a href="../../getting-started/overview/" class="md-tabs__link">
           
   
   
@@ -306,7 +308,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../guides/tips.md" class="md-tabs__link">
+        <a href="../../guides/tips/" class="md-tabs__link">
           
   
   
@@ -473,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/overview.md" class="md-nav__link">
+      <a href="../../getting-started/overview/" class="md-nav__link">
         
   
   
@@ -501,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/character-creation.md" class="md-nav__link">
+      <a href="../../getting-started/character-creation/" class="md-nav__link">
         
   
   
@@ -529,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/basic-systems.md" class="md-nav__link">
+      <a href="../../getting-started/basic-systems/" class="md-nav__link">
         
   
   
@@ -819,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../world/regions.md" class="md-nav__link">
+      <a href="../../world/regions/" class="md-nav__link">
         
   
   
@@ -936,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/tips.md" class="md-nav__link">
+      <a href="../../guides/tips/" class="md-nav__link">
         
   
   
@@ -964,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guides/faq.md" class="md-nav__link">
+      <a href="../../guides/faq/" class="md-nav__link">
         
   
   
@@ -972,6 +974,34 @@
     
   
     คำถามที่พบบ่อย
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    การเจนภาพ (Art Prompts)
   
 
     
@@ -1498,7 +1528,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure.md" class="md-nav__link">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    แผนการพัฒนา
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ประวัติการอัพเดท
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure/" class="md-nav__link">
         
   
   
@@ -1526,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api.md" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
@@ -1986,7 +2072,7 @@
 <hr />
 <h2 id="_3">🚀 การติดตั้ง<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1-clone-repository">1. Clone Repository<a class="headerlink" href="#1-clone-repository" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/cosmic-narrative-game.git
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/GridsMicro/cosmic-narrative-game.git
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>cosmic-narrative-game
 </code></pre></div>
 <h3 id="2-dependencies">2. ติดตั้ง Dependencies<a class="headerlink" href="#2-dependencies" title="Permanent link">&para;</a></h3>
@@ -2073,33 +2159,24 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cosmic-narrative-game/
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>├── app/                        # Next.js App Router
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>│   ├── ai/                    # ระบบ AI Chat
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│   ├── game/                  # ระบบเกม RPG
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│   │   ├── layout.tsx         # Game Layout + Modals
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>│   │   ├── astra-city/        # เมืองหลัก
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>│   │   ├── battle/            # ระบบการต่อสู้
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>│   │   ├── cards/             # จัดการการ์ด
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>│   │   └── dev-tools/         # เครื่องมือสำหรับ Dev
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>│   └── api/                   # API Routes
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>│       └── chat/              # Gemini AI Integration
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>├── components/                 # React Components
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>│   ├── game/                  # Game-specific components
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>│   │   ├── modals/            # Modal components
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>│   │   ├── PlayerHUD.tsx      # HUD หลัก
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>│   │   └── PetCompanion.tsx   # ระบบสัตว์เลี้ยง
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>│   └── CosmicChatComponent.tsx
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>├── context/
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>│   └── GameContext.tsx        # Global State Management
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>├── hooks/
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>│   └── useGameData.ts         # Custom Hooks
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>├── lib/
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>│   └── supabase.ts            # Supabase Client
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>├── types/
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>│   ├── game.ts                # Game Types
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>│   └── database.ts            # Database Types
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>└── docs/                      # เอกสาร
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    ├── roadmap.md
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    ├── changelog.md
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    └── ...
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>│   ├── game/                  # ระบบเกม RPG (layout.tsx, battle, cards, dev-tools)
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>│   └── api/                   # API Routes (Gemini AI Integration)
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>├── components/                 # React Components
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>│   ├── game/                  # Game-specific components (modals, PlayerHUD, PetCompanion)
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>│   └── CosmicChatComponent.tsx
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>├── context/
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>│   └── GameContext.tsx        # Global State Management (Supabase Sync)
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>├── hooks/
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>│   └── useGameData.ts         # Custom Hooks for Data Operations
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>├── lib/
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>│   └── supabase.ts            # Supabase Client
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>├── types/
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>│   ├── game.ts                # Game Logic Types
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>│   └── database.ts            # Supabase Generated Types
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>└── docs/                      # คู่มือและ SQL Schema
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    ├── roadmap.md
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>    ├── changelog.md
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    └── ...
 </code></pre></div>
 <hr />
 <h2 id="_6">🔧 เครื่องมือสำหรับนักพัฒนา<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
