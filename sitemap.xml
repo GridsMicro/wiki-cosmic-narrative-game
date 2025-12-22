@@ -2,82 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/api/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/backup-restore/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/changelog/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/concept-art/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/database/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/dev-tools/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/installation/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/roadmap/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/scene-system/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/stat-calculation/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/developer/structure/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/getting-started/basic-systems/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/getting-started/character-creation/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/getting-started/character-growth/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/getting-started/overview/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/guides/faq/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/guides/himmaphan/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/guides/prompts/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/guides/tips/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/7city/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/Act1/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/KilesAndMaraCharacters/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/KilesAndMaraCharactersPrompt/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/NeotericSovereignCharacters/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/Starter/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/VisualPrompts%20copy/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/story/VisualPrompts/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/announcements/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/battle/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/cards/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/items/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/oracle/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/pets/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/systems/skills/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/world/map/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/world/npcs/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
          <loc>https://gridsmicro.github.io/wiki-cosmic-narrative-game/world/regions/</loc>
-         <lastmod>2025-12-21</lastmod>
+         <lastmod>2025-12-22</lastmod>
     </url>
 </urlset>
