@@ -43,31 +43,50 @@ theme:
 
 # Navigation
 nav:
-  - หน้าแรก: index.md
-  - เริ่มต้นเล่น:
+  - หน้าแรก (Home): index.md
+  - เริ่มต้นเล่น (Getting Started):
     - ภาพรวมเกม: getting-started/overview.md
     - การสร้างตัวละคร: getting-started/character-creation.md
+    - การพัฒนาตัวละคร: getting-started/character-growth.md
     - ระบบพื้นฐาน: getting-started/basic-systems.md
-  - ระบบเกม:
+  - ระบบเกม (Game Systems):
+    - ภาพรวม: systems/index.md
+    - ประกาศ: systems/announcements.md
+    - ระบบคำทำนาย: systems/oracle.md
     - ระบบการต่อสู้: systems/battle.md
+    - ระบบไอเทม: systems/items.md
     - ระบบการ์ด: systems/cards.md
     - ระบบสกิล: systems/skills.md
     - ระบบสัตว์เลี้ยง: systems/pets.md
-  - โลกเกม:
+  - เนื้อเรื่อง (Story & Lore):
+    - ปฐมบท 24XX: story/Starter.md
+    - "บทที่ 1: การรวมตัว": story/Act1.md
+    - 7 มหานคร: story/7city.md
+    - ทำเนียบผู้ปกป้อง: story/NeotericSovereignCharacters.md
+    - ทำเนียบจอมมาร: story/KilesAndMaraCharacters.md
+  - โลกเกม (World):
     - แผนที่โลก: world/map.md
     - เมืองและภูมิภาค: world/regions.md
     - ตัวละคร NPC: world/npcs.md
-  - คู่มือ:
+  - คู่มือ (Guides):
     - เคล็ดลับการเล่น: guides/tips.md
     - คำถามที่พบบ่อย: guides/faq.md
     - การเจนภาพ (Art Prompts): guides/prompts.md
     - แซมเปิลแผนที่หิมพานต์: guides/himmaphan.md
-  - สำหรับนักพัฒนา:
-    - การติดตั้ง: developer/installation.md
-    - แผนการพัฒนา: developer/roadmap.md
-    - ประวัติการอัพเดท: developer/changelog.md
-    - โครงสร้างโค้ด: developer/structure.md
+  - สำหรับนักพัฒนา (For Developers):
+    - การติดตั้ง (Installation): developer/installation.md
+    - แผนการพัฒนา (Roadmap): developer/roadmap.md
+    - ประวัติการอัพเดท (Changelog): developer/changelog.md
+    - โครงสร้างโค้ด (Code Structure): developer/structure.md
+    - ฐานข้อมูล (Database): developer/database.md
+    - ระบบสำรองและกู้คืน: developer/backup-restore.md
+    - ระบบ DevTools: developer/dev-tools.md
+    - ระบบซีน: developer/scene-system.md
+    - ระบบคำนวณสถิติ (Stat Calculation): developer/stat-calculation.md
+    - คลังภาพแนวคิด (Concept Art): developer/concept-art.md
     - API Reference: developer/api.md
+    - พรอมต์สร้างภาพจอมมาร: story/KilesAndMaraCharactersPrompt.md
+    - คลังภาพ (Visuals): story/VisualPrompts.md
 
 # Plugins
 plugins:

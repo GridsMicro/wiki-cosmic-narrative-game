@@ -1,252 +1,161 @@
-# การติดตั้งและเริ่มต้นโปรเจค
+# การติดตั้งและเริ่มต้นโปรเจกต์ / Installation & Getting Started
 
-## 📋 ข้อกำหนดเบื้องต้น
+=== "ภาษาไทย (Thai)"
 
-### Software Requirements
-- **Node.js**: 18.x หรือสูงกว่า
-- **npm** หรือ **pnpm**: Package manager
-- **Git**: สำหรับ version control
-- **Supabase Account**: สำหรับ database และ authentication
+    ## 📋 ข้อกำหนดเบื้องต้น
 
-### Knowledge Requirements
-- TypeScript / JavaScript
-- React และ Next.js (App Router)
-- Tailwind CSS
-- Supabase (PostgreSQL, Row Level Security)
+    ### ข้อกำหนดด้านซอฟต์แวร์ (Software Requirements)
+    - **Node.js**: 18.x หรือสูงกว่า
+    - **npm** หรือ **pnpm**: ตัวจัดการแพ็คเกจ (Package manager)
+    - **Git**: สำหรับการควบคุมเวอร์ชัน (Version control)
+    - **Supabase Account**: สำหรับฐานข้อมูลและการยืนยันตัวตน (Database และ Authentication)
 
----
+    ### ข้อกำหนดด้านความรู้ (Knowledge Requirements)
+    - TypeScript / JavaScript
+    - React และ Next.js (App Router)
+    - Tailwind CSS
+    - Supabase (PostgreSQL, Row Level Security)
 
-## 🚀 การติดตั้ง
+    ---
 
-### 1. Clone Repository
+    ## 🚀 การติดตั้ง
 
-```bash
-git clone https://github.com/GridsMicro/cosmic-narrative-game.git
-cd cosmic-narrative-game
-```
-
-### 2. ติดตั้ง Dependencies
-
-```bash
-npm install
-# หรือ
-pnpm install
-```
-
-### 3. ตั้งค่า Environment Variables
-
-สร้างไฟล์ `.env.local` ในโฟลเดอร์ root:
-
-```env
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-
-# Google Gemini AI (สำหรับระบบ Chat)
-GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
-
-# Optional: Stripe (สำหรับระบบชำระเงิน - ถ้ามี)
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key
-STRIPE_SECRET_KEY=your_stripe_secret
-```
-
-!!! warning "ความปลอดภัย"
-    **ห้าม** commit ไฟล์ `.env.local` ขึ้น Git! ตรวจสอบให้แน่ใจว่ามีใน `.gitignore`
-
----
-
-## 🗄️ ตั้งค่า Database (Supabase)
-
-### 1. สร้าง Supabase Project
-
-1. ไปที่ [supabase.com](https://supabase.com)
-2. สร้าง Project ใหม่
-3. คัดลอก URL และ Anon Key มาใส่ใน `.env.local`
-
-### 2. รัน SQL Schema
-
-ไปที่ **SQL Editor** ใน Supabase Dashboard และรันไฟล์ SQL ตามลำดับ:
-
-#### 2.1 Core Tables
-```bash
-# ในโปรเจค ดูไฟล์ที่:
-docs/database_master_schema.md
-```
-
-รัน SQL สำหรับตารางหลัก:
-- `player_save_data` - ข้อมูลผู้เล่น
-- `cards_master` - ข้อมูลการ์ด
-- `items` - ไอเทมในเกม
-- `player_items` - ไอเทมของผู้เล่น
-- `maps` - แผนที่และสถานที่
-- `npcs_master` - ตัวละคร NPC
-
-#### 2.2 Row Level Security (RLS)
-
-!!! danger "สำคัญมาก"
-    ต้องเปิด RLS และตั้งค่า Policies เพื่อความปลอดภัย!
-
-```sql
--- ตัวอย่าง RLS Policy สำหรับ player_save_data
-ALTER TABLE player_save_data ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own data"
-ON player_save_data FOR SELECT
-USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can update own data"
-ON player_save_data FOR UPDATE
-USING (auth.uid() = user_id);
-```
-
-### 3. Seed Data (ข้อมูลเริ่มต้น)
-
-รันคำสั่ง SQL เพื่อใส่ข้อมูลเริ่มต้น:
-
-```sql
--- ดูตัวอย่างใน:
--- docs/card_system.md
--- docs/equipment_system.md
-```
-
-หรือใช้ **Dev Tools** ในเกม:
-1. รันเกม: `npm run dev`
-2. ไปที่ `/game/dev-tools`
-3. กดปุ่ม "Seed Data" ในแต่ละแท็บ
-
----
-
-## 🎮 รันโปรเจค
-
-### Development Mode
-
-```bash
-npm run dev
-```
-
-เปิดเบราว์เซอร์ที่ `http://localhost:3000`
-
-### Production Build
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## 📁 โครงสร้างโปรเจค
-
-```
-cosmic-narrative-game/
-├── app/                        # Next.js App Router
-│   ├── ai/                    # ระบบ AI Chat
-│   ├── game/                  # ระบบเกม RPG (layout.tsx, battle, cards, dev-tools)
-│   └── api/                   # API Routes (Gemini AI Integration)
-├── components/                 # React Components
-│   ├── game/                  # Game-specific components (modals, PlayerHUD, PetCompanion)
-│   └── CosmicChatComponent.tsx
-├── context/
-│   └── GameContext.tsx        # Global State Management (Supabase Sync)
-├── hooks/
-│   └── useGameData.ts         # Custom Hooks for Data Operations
-├── lib/
-│   └── supabase.ts            # Supabase Client
-├── types/
-│   ├── game.ts                # Game Logic Types
-│   └── database.ts            # Supabase Generated Types
-└── docs/                      # คู่มือและ SQL Schema
-    ├── roadmap.md
-    ├── changelog.md
-    └── ...
-```
-
----
-
-## 🔧 เครื่องมือสำหรับนักพัฒนา
-
-### Dev Tools Panel
-
-เข้าถึงได้ที่: `/game/dev-tools`
-
-**ฟีเจอร์**:
-- 📊 **Dashboard**: ภาพรวมข้อมูลทั้งหมด
-- 🃏 **Cards**: จัดการการ์ด (CRUD)
-- 🎒 **Items**: จัดการไอเทม
-- 👥 **Players**: ดูและแก้ไขข้อมูลผู้เล่น
-- 🗺️ **Maps**: จัดการแผนที่
-- 🧑‍🤝‍🧑 **NPCs**: จัดการตัวละคร NPC
-- 🐾 **Pets**: จัดการสัตว์เลี้ยง
-- 🎵 **Music**: อัพโหลดเพลง BGM
-
-### Database Viewer
-
-ใช้ Supabase Dashboard:
-- **Table Editor**: แก้ไขข้อมูลโดยตรง
-- **SQL Editor**: รัน SQL queries
-- **Storage**: จัดการไฟล์ (รูปภาพ, เสียง)
-
----
-
-## 🐛 การ Debug
-
-### React DevTools
-```bash
-npm install -g react-devtools
-react-devtools
-```
-
-### Supabase Logs
-ดู Real-time logs ใน Supabase Dashboard > Logs
-
-### Console Logging
-```typescript
-// ใช้ใน development เท่านั้น
-if (process.env.NODE_ENV === 'development') {
-  console.log('Debug:', data)
-}
-```
-
----
-
-## 📦 การ Deploy
-
-### Vercel (แนะนำ)
-
-1. Push โค้ดขึ้น GitHub
-2. Import project ใน [Vercel](https://vercel.com)
-3. เพิ่ม Environment Variables
-4. Deploy!
-
-### Manual Build
-
-```bash
-npm run build
-npm start
-```
-
----
-
-## 🔗 ลิงก์ที่เป็นประโยชน์
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Supabase Documentation](https://supabase.com/docs)
-- [Tailwind CSS](https://tailwindcss.com/docs)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Google Gemini AI](https://ai.google.dev/)
-
----
-
-## 💡 เคล็ดลับ
-
-!!! tip "Hot Reload"
-    Next.js รองรับ Hot Module Replacement (HMR) - บันทึกไฟล์แล้วเห็นผลทันที!
-
-!!! tip "TypeScript"
-    ใช้ TypeScript เต็มที่ - จะช่วยจับ bugs ก่อน runtime
-
-!!! tip "Supabase Types"
-    Generate TypeScript types จาก Supabase:
+    ### 1. Clone Repository
     ```bash
-    npx supabase gen types typescript --project-id your-project-id > types/database.ts
+    git clone https://github.com/GridsMicro/cosmic-narrative-game.git
+    cd cosmic-narrative-game
     ```
+
+    ### 2. ติดตั้ง Dependencies
+    ```bash
+    npm install
+    # หรือ
+    pnpm install
+    ```
+
+    ### 3. ตั้งค่า Environment Variables
+    สร้างไฟล์ `.env.local` ในโฟลเดอร์ root:
+    ```env
+    # Supabase
+    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+    # Google Gemini AI (สำหรับระบบ Chat)
+    GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
+
+    # Optional: Stripe (สำหรับระบบชำระเงิน - ถ้ามี)
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+    STRIPE_SECRET_KEY=your_stripe_secret
+    ```
+
+    !!! warning "ความปลอดภัย"
+        **ห้าม** commit ไฟล์ `.env.local` ขึ้น Git! ตรวจสอบให้แน่ใจว่าได้ระบุไว้ใน `.gitignore`
+
+    ---
+
+    ## 🗄️ ตั้งค่า Database (Supabase)
+
+    ### 1. สร้าง Supabase Project
+    1. ไปที่ [supabase.com](https://supabase.com)
+    2. สร้าง Project ใหม่
+    3. คัดลอก URL และ Anon Key มาใส่ใน `.env.local`
+
+    ### 2. รัน SQL Schema
+    ไปที่ **SQL Editor** ใน Supabase Dashboard และรันไฟล์ SQL ตามลำดับ (ดูในโฟลเดอร์ `docs` ของโปรเจกต์)
+
+    ---
+
+    ## 🎮 รันโปรเจกต์
+
+    ### โหมดพัฒนา (Development Mode)
+    ```bash
+    npm run dev
+    ```
+    เปิดเบราว์เซอร์ที่ `http://localhost:3000`
+
+    ### โหมด Production
+    ```bash
+    npm run build
+    npm start
+    ```
+
+=== "English"
+
+    ## 📋 Prerequisites
+
+    ### Software Requirements
+    - **Node.js**: 18.x or higher
+    - **npm** or **pnpm**: Package manager
+    - **Git**: For version control
+    - **Supabase Account**: For database and authentication
+
+    ### Knowledge Requirements
+    - TypeScript / JavaScript
+    - React and Next.js (App Router)
+    - Tailwind CSS
+    - Supabase (PostgreSQL, Row Level Security)
+
+    ---
+
+    ## 🚀 Installation
+
+    ### 1. Clone Repository
+    ```bash
+    git clone https://github.com/GridsMicro/cosmic-narrative-game.git
+    cd cosmic-narrative-game
+    ```
+
+    ### 2. Install Dependencies
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
+
+    ### 3. Set Environment Variables
+    Create a `.env.local` file in the root folder:
+    ```env
+    # Supabase
+    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+    # Google Gemini AI (For Chat System)
+    GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
+
+    # Optional: Stripe (For Payment System - if any)
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+    STRIPE_SECRET_KEY=your_stripe_secret
+    ```
+
+    !!! warning "Security"
+        **Do not** commit the `.env.local` file to Git! Ensure it is included in your `.gitignore`.
+
+    ---
+
+    ## 🗄️ Database Setup (Supabase)
+
+    ### 1. Create Supabase Project
+    1. Go to [supabase.com](https://supabase.com)
+    2. Create a new project.
+    3. Copy the URL and Anon Key into your `.env.local` file.
+
+    ### 2. Run SQL Schema
+    Go to the **SQL Editor** in the Supabase Dashboard and run the SQL files in order (refer to the `docs` folder in the project).
+
+    ---
+
+    ## 🎮 Running the Project
+
+    ### Development Mode
+    ```bash
+    npm run dev
+    ```
+    Open your browser at `http://localhost:3000`.
+
+    ### Production Mode
+    ```bash
+    npm run build
+    npm start
+    ```
+
+*Last Updated: 2025-12-22*

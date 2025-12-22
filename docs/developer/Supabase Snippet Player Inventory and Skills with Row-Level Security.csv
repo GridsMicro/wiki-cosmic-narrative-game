@@ -1,0 +1,101 @@
+table_name,column_name,data_type
+cards_master,description,text
+cards_master,element,character varying
+cards_master,base_buffs,jsonb
+cards_master,id,uuid
+cards_master,name_th,character varying
+cards_master,created_at,timestamp with time zone
+cards_master,image_url,text
+cards_master,rarity,character varying
+cards_master,card_type,character varying
+characters_base,base_stk,integer
+characters_base,base_lux,integer
+characters_base,base_cri,integer
+characters_base,id,integer
+characters_base,base_agi,integer
+characters_base,base_int,integer
+characters_base,star_type,character varying
+characters_base,base_element,character varying
+characters_base,base_hp,integer
+characters_base,base_mp,integer
+characters_base,base_dex,integer
+characters_base,name_th,character varying
+characters_base,description,text
+characters_base,base_atk,integer
+characters_base,base_vit,integer
+characters_base,gender,character varying
+characters_master,base_holy,integer
+characters_master,avatar_url,text
+characters_master,name,text
+characters_master,base_nit,integer
+characters_master,base_tapa,integer
+characters_master,description,text
+characters_master,base_vit,integer
+characters_master,base_soul,integer
+characters_master,base_stk,integer
+characters_master,created_at,timestamp with time zone
+characters_master,element,text
+characters_master,id,uuid
+characters_master,base_meditation,integer
+inventory,is_equipped,boolean
+inventory,created_at,timestamp with time zone
+inventory,quantity,integer
+inventory,user_id,uuid
+inventory,id,uuid
+inventory,item_id,uuid
+items,description,text
+items,created_at,timestamp with time zone
+items,is_soulbound,boolean
+items,rarity,character varying
+items,max_global_count,integer
+items,drop_rate_weight,integer
+items,name,character varying
+items,price,integer
+items,type,character varying
+items,id,uuid
+items,image_url,text
+items,base_stats,jsonb
+locations,id,uuid
+locations,bg_image_url,text
+locations,element_type,character varying
+locations,name_th,character varying
+locations,animation_type,character varying
+maps,description,text
+maps,name,text
+maps,image_url,text
+maps,night_image_url,text
+maps,slug,text
+maps,map_type,text
+maps,pos_y,integer
+maps,pos_x,integer
+maps,world_map_id,uuid
+maps,is_combat_enabled,boolean
+maps,recommended_level,integer
+maps,created_at,timestamp with time zone
+maps,id,uuid
+maps,entrance_scene_slug,text
+maps,bgm_url,text
+monsters_master,sprite_url,text
+monsters_master,name,text
+monsters_master,created_at,timestamp with time zone
+monsters_master,description,text
+monsters_master,map_id,uuid
+monsters_master,is_boss,boolean
+monsters_master,gold_reward,integer
+monsters_master,exp_reward,integer
+monsters_master,speed,integer
+monsters_master,def,integer
+monsters_master,atk,integer
+monsters_master,hp_max,integer
+monsters_master,level,integer
+monsters_master,id,uuid
+monsters_master,drop_table,jsonb
+monsters_master,element,text
+narrative_scenes,map_id,uuid
+narrative_scenes,id,uuid
+narrative_scenes,speaker_name,text
+narrative_scenes,speaker_avatar,text
+narrative_scenes,action_type,text
+narrative_scenes,created_at,timestamp with time zone
+narrative_scenes,action_data,jsonb
+narrative_scenes,choices_json,jsonb
