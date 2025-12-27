@@ -68,6 +68,52 @@ app/
   ```
 - ทุกฟอร์มใช้ `supabase.from(tableId).select()`, `insert()`, `update()`, `delete()` ผ่าน `fetchData`, `handleSave`, `handleDelete` ที่กำหนดใน `page.tsx`.
 
+## 🌐 Environment Variables
+
+### การแยก Host (Development)
+ถ้าคุณแยกโปรเจกต์เป็น 2 ส่วน:
+- **`engins-cosmic-narrative-game`** - DevTools (localhost:3000)
+- **`cosmic-narrative-game`** - เกมจริง (localhost:3002)
+
+ต้องเพิ่ม environment variable ใน `.env.local` ของ DevTools:
+
+```env
+# URL ของโปรเจกต์เกมจริง (cosmic-narrative-game)
+NEXT_PUBLIC_GAME_URL=http://localhost:3002
+```
+
+### การขึ้น Production
+เมื่อขึ้น production ให้เปลี่ยน URL เป็นโดเมนจริง:
+
+```env
+# Production
+NEXT_PUBLIC_GAME_URL=https://yourgame.com
+```
+
+### ตัวอย่างไฟล์ `.env.local` สมบูรณ์:
+```env
+# Supabase Connection
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+
+# URL ของโปรเจกต์เกมจริง
+NEXT_PUBLIC_GAME_URL=http://localhost:3002
+
+# Gemini API (ถ้ามี)
+GEMINI_API_KEY=your-api-key-here
+```
+
+### การใช้งาน
+ปุ่ม "Visit" (รูปตา 👁️) ใน DevTools จะใช้ `NEXT_PUBLIC_GAME_URL` เพื่อ redirect ไปยังหน้าเกมจริง:
+
+```tsx
+const gameUrl = process.env.NEXT_PUBLIC_GAME_URL || 'http://localhost:3000';
+window.location.href = `${gameUrl}/game/world/${item.slug}`;
+```
+
+**หมายเหตุ:** หลังจากเปลี่ยน `.env.local` ต้อง **restart dev server** (`npm run dev`) เพื่อให้มีผล
+
+
 ## 🧭 ตัวอย่างการใช้งาน
 ### ดูข้อมูล
 ```tsx
@@ -113,5 +159,7 @@ await supabase.from('announcements').delete().eq('id', announcementId);
 
 ---
 
-*อัปเดตเมื่อ:* 2025‑12‑22
-*ผู้จัดทำ:* Antigravity (AI)   
+*อัพเดตเมื่อ:* 2025‑12‑27  
+*ผู้จัดทำ:* Antigravity (AI)  
+*เพิ่มเติม:* Environment Variables สำหรับการแยก host และ production deployment
+   

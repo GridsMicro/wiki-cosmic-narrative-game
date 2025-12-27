@@ -83,6 +83,7 @@ nav:
     - ระบบ DevTools: developer/dev-tools.md
     - ระบบซีน: developer/scene-system.md
     - ระบบคำนวณสถิติ (Stat Calculation): developer/stat-calculation.md
+    - ระบบ Animation: developer/animations.md
     - คลังภาพแนวคิด (Concept Art): developer/concept-art.md
     - API Reference: developer/api.md
     - พรอมต์สร้างภาพจอมมาร: story/KilesAndMaraCharactersPrompt.md
