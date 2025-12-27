@@ -1669,6 +1669,34 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monster-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👾 ระบบมอนสเตอร์ (Monster System)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👾 ระบบมอนสเตอร์ (Monster System)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monsters_master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        monsters_master
+      
+    </span>
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#player_items-user-instances" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1763,6 +1791,17 @@
     <span class="md-ellipsis">
       
         narrative_scenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcs_master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        npcs_master
       
     </span>
   </a>
@@ -2030,6 +2069,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ระบบ Animation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../concept-art/" class="md-nav__link">
         
   
@@ -2191,6 +2258,34 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monster-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👾 ระบบมอนสเตอร์ (Monster System)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👾 ระบบมอนสเตอร์ (Monster System)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monsters_master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        monsters_master
+      
+    </span>
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#player_items-user-instances" class="md-nav__link">
     <span class="md-ellipsis">
@@ -2285,6 +2380,17 @@
     <span class="md-ellipsis">
       
         narrative_scenes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npcs_master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        npcs_master
       
     </span>
   </a>
@@ -2453,7 +2559,12 @@
 <h2 id="inventory-items">🎒 ระบบไอเทม (Inventory &amp; Items)<a class="headerlink" href="#inventory-items" title="Permanent link">&para;</a></h2>
 <h3 id="items-master-data"><code>items</code> (Master Data)<a class="headerlink" href="#items-master-data" title="Permanent link">&para;</a></h3>
 <p>ตารางเก็บข้อมูลไอเทมต้นแบบที่ห้ามผู้เล่นแก้ไขทั่วไป
-- <strong>คอลัมน์</strong>: <code>id</code> (UUID), <code>name</code> (String), <code>type</code> (Weapon, Consumable, etc.), <code>base_stats</code> (JSONB), <code>rarity</code> (Common-Legendary), <code>image_url</code> (Text)</p>
+- <strong>คอลัมน์</strong>: <code>id</code> (UUID), <code>name</code>, <code>slug</code>, <code>type</code> (Weapon, Consumable, Quest), <code>base_stats</code> (JSONB), <code>rarity</code>, <code>image_url</code></p>
+<hr />
+<h2 id="monster-system">👾 ระบบมอนสเตอร์ (Monster System)<a class="headerlink" href="#monster-system" title="Permanent link">&para;</a></h2>
+<h3 id="monsters_master"><code>monsters_master</code><a class="headerlink" href="#monsters_master" title="Permanent link">&para;</a></h3>
+<p>ตารางเก็บข้อมูลมอนสเตอร์ที่เป็นศัตรูในเกมและเป้าหมายเควสต์
+- <strong>คอลัมน์สำคัญ</strong>: <code>name</code>, <code>slug</code>, <code>level</code>, <code>hp</code>, <code>atk</code>, <code>def</code>, <code>exp_reward</code>, <code>money_reward</code>, <code>location_id</code></p>
 <h3 id="player_items-user-instances"><code>player_items</code> (User Instances)<a class="headerlink" href="#player_items-user-instances" title="Permanent link">&para;</a></h3>
 <p>ตารางเก็บไอเทมที่ผู้เล่นแต่ละคนเป็นเจ้าของ
 - <strong>คอลัมน์</strong>: <code>user_id</code> (FK), <code>item_id</code> (FK), <code>enhancement_level</code> (Int), <code>is_equipped</code> (Bool), <code>slot</code> (Head, Body, Weapon)</p>
@@ -2524,7 +2635,10 @@
 <h2 id="narrative-system">🎭 ระบบเนื้อเรื่อง (Narrative System)<a class="headerlink" href="#narrative-system" title="Permanent link">&para;</a></h2>
 <h3 id="narrative_scenes"><code>narrative_scenes</code><a class="headerlink" href="#narrative_scenes" title="Permanent link">&para;</a></h3>
 <p>ฐานข้อมูลสำหรับคัทซีนและบทสนทนาแบบก้าวหน้า
-- <strong>คอลัมน์สำคัญ</strong>: <code>scene_slug</code>, <code>content_json</code> (บทพูด), <code>choices_json</code> (ทางเลือก), <code>action_type</code>, <code>next_scene_slug</code></p>
+- <strong>คอลัมน์สำคัญ</strong>: <code>scene_slug</code>, <code>content_json</code> (บทพูด), <code>choices_json</code> (ทางเลือก), <code>action_type</code>, <code>conditions_json</code> (เงื่อนไขเควสต์), <code>rewards_json</code> (รางวัล), <code>speaker_avatar</code></p>
+<h3 id="npcs_master"><code>npcs_master</code><a class="headerlink" href="#npcs_master" title="Permanent link">&para;</a></h3>
+<p>ตารางเก็บข้อมูล NPC ทั้งหมดในจักรวาล
+- <strong>คอลัมน์สำคัญ</strong>: <code>name</code>, <code>title</code>, <code>map_id</code>, <code>dialogue_json</code>, <code>position_x</code>, <code>position_y</code> (พิกัดการวางตัวละคร 0-100%)</p>
 <hr />
 <div class="admonition danger">
 <p class="admonition-title">คำเตือนสำหรับการพัฒนา</p>

@@ -1781,6 +1781,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quest-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ ระบบเงื่อนไขและเควสต์ (Quest Integration)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ ระบบเงื่อนไขและเควสต์ (Quest Integration)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        การระบุเงื่อนไขใน conditions_json:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        การส่งงาน (REWARD Action):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scene_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1876,6 +1915,34 @@
     
   
     ระบบคำนวณสถิติ (Stat Calculation)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ระบบ Animation
   
 
     
@@ -2085,6 +2152,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quest-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ ระบบเงื่อนไขและเควสต์ (Quest Integration)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ ระบบเงื่อนไขและเควสต์ (Quest Integration)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        การระบุเงื่อนไขใน conditions_json:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        การส่งงาน (REWARD Action):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scene_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2211,15 +2317,33 @@
 <li>กรอกรหัส <strong>Slug</strong> (ห้ามมีเว้นวรรค)</li>
 <li>ใส่บทพูดในรูปแบบ <code>["ประโยค 1", "ประโยค 2"]</code></li>
 <li>กำหนด <strong>Action Type</strong>:<ul>
-<li><code>DIALOGUE</code>: คุยจบแล้วไป Scene ถัดไป (<code>next_scene_slug</code>)</li>
 <li><code>CHOICE</code>: แสดงตัวเลือกให้ผู้เล่น (ต้องใส่ <code>choices_json</code>)</li>
+<li><code>ACCEPT_QUEST</code>: รับภารกิจโดยตรงจากฉากสนทนา</li>
+<li><code>COMPLETE_QUEST</code>: สำเร็จภารกิจจากฉากสนทนา</li>
 <li><code>BATTLE</code>: ตัดเข้าฉากต่อสู้</li>
-<li><code>REWARD</code>: มอบรางวัล</li>
+<li><code>REWARD</code>: มอบรางวัล (เงิน, EXP, หรือจบเควสต์)</li>
 <li><code>WARP</code>: ย้ายแผนที่</li>
 <li><code>END</code>: จบการทำงานและกลับหน้าสำรวจ</li>
 </ul>
 </li>
 </ol>
+<hr />
+<h2 id="quest-integration">🛡️ ระบบเงื่อนไขและเควสต์ (Quest Integration)<a class="headerlink" href="#quest-integration" title="Permanent link">&para;</a></h2>
+<p>ระบบ Scene Player สามารถตรวจสอบสถานะเควสต์ของผู้เล่นเพื่อเลือกแสดงบทสนทนาที่ถูกต้อง:</p>
+<h3 id="conditions_json">การระบุเงื่อนไขใน <code>conditions_json</code>:<a class="headerlink" href="#conditions_json" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>{"quest_status": "NONE"}</code>: ยังไม่เคยรับเควสต์</li>
+<li><code>{"quest_status": "ACTIVE"}</code>: อยู่ระหว่างทำเควสต์</li>
+<li><code>{"quest_status": "READY"}</code>: ทำภารกิจเสร็จแล้ว รอส่งงาน</li>
+<li><code>{"quest_status": "COMPLETED"}</code>: ส่งเควสต์เรียบร้อยแล้ว</li>
+</ul>
+<h3 id="reward-action">การส่งงาน (REWARD Action):<a class="headerlink" href="#reward-action" title="Permanent link">&para;</a></h3>
+<p>เมื่อสถานะเป็น <code>READY</code> ให้ใช้ Action <code>REWARD</code> พร้อมระบุข้อมูลใน <code>rewards_json</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;quest_action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COMPLETE&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;quest_slug&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_awesome_quest&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</code></pre></div></p>
 <hr />
 <h2 id="scene_1">🔗 การเรียกใช้งาน Scene ในเกม<a class="headerlink" href="#scene_1" title="Permanent link">&para;</a></h2>
 <h3 id="1-npc">วิธีที่ 1: ผูกกับ NPC<a class="headerlink" href="#1-npc" title="Permanent link">&para;</a></h3>
